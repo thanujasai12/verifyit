@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>License Plate Recognition App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="welcomeMessage" class="welcome-box">
+            <h2>WELCOME TO VERIFYIT</h2>
+            <p>Your verification is made easier.</p>
+        </div>
+
+        <div id="loginSection">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <select id="userType" required>
+                    <option value="" disabled selected>Select User Type</option>
+                    <option value="police">Police</option>
+                    <option value="owner">Vehicle Owner</option>
+                </select>
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div id="loginMessage"></div>
+        </div>
+
+        <div id="appSection" style="display:none;">
+            <h1>License Plate Recognition</h1>
+            <button id="scanButton" style="display:none;">Start Scanner</button>
+            <div id="uploadOptions" style="display:none;">
+                <h2>Upload Documents</h2>
+                <button id="uploadLicenseButton">Upload License</button>
+                <button id="uploadRCButton">Upload RC Book</button>
+                <button id="uploadInsuranceButton">Upload Insurance</button>
+                <button id="uploadPictureButton">Upload Your Picture</button>
+                <button id="uploadPlateButton">Upload Number Plate</button>
+            </div>
+            <div id="result"></div>
+            <button id="logoutButton">Logout</button>
+        </div>
+
+        <video id="video" width="320" height="240" style="display:none;"></video>
+        <button id="captureButton" style="display:none;">Capture</button>
+        <canvas id="canvas" style="display:none;"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
